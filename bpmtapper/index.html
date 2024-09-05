@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="bpmCalc.js" type="module"></script>
+    <title> BPM Tapper </title>
+  </head>
+  <body>
+    <h1 class="centeredText"> BPM Tapper </h1>
+    
+    <div class="center">
+      <div class="container">
+        <p id="bpmDisplay"> <span id="integer">---</span><span id="decimal">.---</span> <span id="range">±-.---</span> </p>
+      </div>
+    </div>
+    
+    <div class="center">
+      <div class="container">
+        <p id="count"> -- </p>
+      </div>
+    </div>
+    
+    <div class="center">
+      <div class="container">
+        <button id="bpmTap"> tap </button>
+      </div>
+    </div>
+    
+    <br>
+    
+    <div class="center">
+      <div class="container">
+        
+        <button id="reset"> reset </button>
+        
+        &emsp;&emsp;
+        
+        <p class="label"> decimal places: </p>
+        <input id="decimals" type="number" value="3">
+        
+        &emsp;&emsp;
+        
+        <p class="label"> avg diff ms: </p>
+        <input id="avgDiff" type="number" value="50">
+      </div>
+    </div>
+    
+  </body>
+</html>
