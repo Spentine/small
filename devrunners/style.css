@@ -1,0 +1,55 @@
+body {
+  background-color: #111111;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.container {
+  display: none;
+}
+
+.salmon {
+  position: absolute;
+  transform: scale(0.5);
+}
+
+.displayC {
+  position: absolute;
+}
+
+#pointsDisplay {
+  color: #33ddff;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 4px;
+}
+
+#infoContainer {
+  background-color: #222222;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+#distractionContainer {
+  filter: blur(4px);
+}
+
+#salmonContainer {
+  filter: blur(2px);
+  opacity: 0.4;
+}
+
+#holyText {
+  position: absolute;
+  width: 140vw;
+}
+
+#disclaimer {
+  color: #444444;
+}
+
+.water {
+  opacity: 0.2;
+  margin: 0px;
+  transform: scale(2);
+}
