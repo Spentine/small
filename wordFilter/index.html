@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="main.js" type="module"> </script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="centered">
+      <div class="container">
+        <h1 class="centeredText"> Word Filter </h1>
+        <p class="paragraph">
+          &emsp; Use a regex to select filters for English words. This tool can be used in a variety of situations, such as choosing words with certain characters, words with different lengths, and words with other features. It is intended for use in typography to generate long words with specific letters.
+        </p>
+      </div>
+    </div>
+    
+    <div class="centered">
+      <div class="container">
+        <h1 class="centeredText"> Select Filters </h1>
+        
+        <div class="centered">
+          <label for="wordList"> Select Word List: &emsp; </label>
+          <select id="wordList">
+            <option value="english"> English </option>
+          </select>
+        </div>
+        
+        <div class="centered">
+          <label for="regexFilter"> Input Regex Filter: &emsp; </label>
+          <input id="regexFilter" value="^[abcdef]+$">
+        </div>
+        
+        <div class="centered">
+          <button id="filterButton" class="bigButton"> Filter </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="centered">
+      <div class="container hidden" id="listProcessingMenu">
+        <h1 class="centeredText"> List Processing </h1>
+        
+        <div class="centered">
+          <button id="alphabetSortButton"> Sort Alphabetically (a-z) </button>
+        </div>
+        <div class="centered">
+          <button id="revAlphabetSortButton"> Sort Alphabetically (z-a) </button>
+        </div>
+        <div class="centered">
+          <button id="lengthSortButton"> Sort by Length (smaller first) </button>
+        </div>
+        <div class="centered">
+          <button id="revLengthSortButton"> Sort by Length (larger first) </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="centered">
+      <div class="container hidden" id="outputPresentationMenu">
+        <h1 class="centeredText"> Output Presentation </h1>
+        
+        <div class="centered">
+          <button id="newlineSeparationButton"> Newline Separation </button>
+          <button id="csvButton"> CSV </button>
+          <button id="jsonButton"> JSON </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="centered">
+      <div class="container hidden" id="outputMenu">
+        <h1 class="centeredText"> Output </h1>
+        <p id="outputElement"> output here... </p>
+      </div>
+    </div>
+  </body>
+</html>
