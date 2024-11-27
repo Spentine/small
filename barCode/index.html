@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../globalCss/pageStyle.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="module"></script>
+  </head>
+  <body>
+    
+    <div class="container">
+      <h1 class="centeredText"> Code 128 Barcode Scanner </h1>
+      <p class="paragraphText">
+        &emsp; A simple barcode scanner available on the web running in real-time. It is intended to test out the API for front-end media devices and as practice to create a simple traditional image processing tool. It works, but it's definitely not as good as other softwares available on the internet.
+      </p>
+    </div>
+    
+    <div class="container">
+      <p class="centeredText"> Current Timestamp: <span id="cTimeStampElement"> null </span> </p>
+      <p> Bar Data: <span id="dataElement"> null </span> </p>
+      
+    </div>
+    
+    <div class="centered">
+      <div id="videoContainer">
+        <div id="videoOverlay">
+          <canvas id="overlayElement">
+        </div>
+        <video id="cameraData"> </video>
+      </div>
+    </div>
+    
+    <div class="centered">
+      <div id="debugCanvases">
+      </div>
+    </div>
+    
+  </body>
+</html>

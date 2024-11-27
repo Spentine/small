@@ -1,0 +1,8 @@
+#videoOverlay {
+  position: absolute;
+  z-index: 1;
+}
+
+video, canvas {
+  image-rendering: pixelated;
+}
