@@ -17,3 +17,4 @@ When creating this project, it was intended to be a simple traditional image pro
 - Decode barcode data
   - Detect invalid barcodes
   - Reverse upside-down barcodes
+- Convert data to

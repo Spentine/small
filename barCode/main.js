@@ -198,9 +198,9 @@ function main() {
       
       // find 10+:2:1:1 ratio
       const find10p211 = function(diffs) {
-        const toleration = 0.5;
+        const toleration = 0.4;
         
-        const quietLength = 8;
+        const quietLength = 5;
         const check = function(i, bar, f) {
           if (Math.abs(Math.abs(diffs[i].pos - diffs[i+1*f].pos) - bar) > toleration * bar) return false;
           if (Math.abs(Math.abs(diffs[i+1*f].pos - diffs[i+2*f].pos) - bar) > toleration * bar) return false;
