@@ -94,57 +94,57 @@ class SAsm {
     this.program = program;
   }
   
+  sanitize() {
+    for (let i=0; i<this.program.length; i++) {
+      const n = Number(this.program[i]);
+      if (!isNaN(n)) {
+        this.program[i] = n;
+      }
+    }
+  }
+  
   async interpret(outputCallback, inputCallback) {
     let codeIndex = 0;
-    const variables = [];
+    const variables = this.program;
     
     const modifyVar = function(x) {
-      variables[this.program[codeIndex+1]] = x;
+      variables[variables[codeIndex+1]-1] = x;
     }
     
-    while (true) {
-      switch (this.program[codeIndex]) {
-        case 1: { // set
-          modifyVar(this.program[codeIndex+2]);
-          break;
-        } case 2: { // add
+    while (codeIndex < variables.length) {
+      switch (variables[codeIndex]) {
+        case 1: { // add
           modifyVar(
-            toNumber(variables[this.program[codeIndex+1]]) +
-            toNumber(variables[this.program[codeIndex+2]])
+            toNumber(variables[variables[codeIndex+1]-1]) +
+            toNumber(variables[variables[codeIndex+2]-1])
           );
           break;
-        } case 3: { // join
+        } case 2: { // join
           modifyVar(
-            String(variables[this.program[codeIndex+1]]) +
-            String(variables[this.program[codeIndex+2]])
+            String(variables[variables[codeIndex+1]-1]) +
+            String(variables[variables[codeIndex+2]-1])
           );
           break;
-        } case 4: { // char
+        } case 3: { // char
           modifyVar(letterOf(
-            String(variables[this.program[codeIndex+1]]),
-            toNumber(variables[this.program[codeIndex+2]])
+            String(variables[variables[codeIndex+1]-1]),
+            toNumber(variables[variables[codeIndex+2]-1])
           ));
-          break;
-        } case 5: { // ascii
-          modifyVar(String.fromCharCode(
-            toNumber(variables[this.program[codeIndex+1]])
-          ));
-          break;
-        } case 6: { // jump
+          break;;
+        } case 4: { // jump
           if (compare(
-            variables[this.program[codeIndex+2]], 0
+            variables[variables[codeIndex+2]-1], 0
           ) > 0) {
-            codeIndex = variables[this.program[codeIndex+1]];
-            codeIndex -= 3; // offset the change at the end
+            codeIndex = variables[variables[codeIndex+1]-1] - 1;
           }
           break;
-        } case 7: { // print
-          outputCallback(
-            variables[this.program[codeIndex+1]]
+        } case 5: { // print
+          await outputCallback(
+            variables[variables[codeIndex+1]-1]
           );
           break;
-        } case 8: { // input
-          modifyVar(inputCallback());
+        } case 6: { // input
+          modifyVar(await inputCallback());
           break;
         } default: { // other
           // end the program

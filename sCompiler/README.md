@@ -6,14 +6,7 @@ I am approaching the assembly language again with increased skill and practice, 
 
 # Assembly Language
 
-- `1`: "set"
-  - Arguments
-    - `1`: address
-    - `2`: value
-  - Description
-    - The operator will set the variable at address `1` to be equal to the raw value `2`.
-    
-- `2`: "add"
+- `1`: "add"
   - Arguments
     - `1`: address
     - `2`: address
@@ -21,7 +14,7 @@ I am approaching the assembly language again with increased skill and practice, 
     - The operator will set the variable at address `1` to be the sum of the variable at address `1` and the variable at address `2`.
     - The variables will be casted to `Number`s before addition.
     
-- `3`: "join"
+- `2`: "join"
   - Arguments
     - `1`: address
     - `2`: address
@@ -29,35 +22,29 @@ I am approaching the assembly language again with increased skill and practice, 
     - The operator will set the variable at address `1` to be the concatenation of the variable at address `1` and the variable at address `2`.
     - The variables wlil be casted to `String`s before concatenation.
     
-- `4`: "char"
+- `3`: "char"
   - Arguments
     - `1`: address
     - `2`: address
   - Description
     - The operator will set the variable at address `1` to be the character at (the index specified by the variable at address `2`) of the variable at address `1`.
     
-- `5`: "ascii"
-  - Arguments
-    - `1`: address
-    - `2`: address
-  - Description
-    - The operator will set the variable at address `1` to be the corresponding character of the variable at address `2`.
-    - Use `String.fromCharCode(var)`
-    
-- `6`: "jump"
+- `4`: "jump"
   - Arguments
     - `1`: address
     - `2`: address
   - Description
     - If the variable at address `2` is greater than 0, set the current code pointer to the variable at address `1`.
-    sss
-- `7`: "print"
+    - Right after the jump statement, the index will then be incremented by 3.
+    - To jump to a particular bit of code, jump to `index - 3`.
+    
+- `5`: "print"
   - Arguments
     - `1`: address
   - Description
     - Outputs the value of the variable at address `1` to the console.
     
-- `8`: "input"
+- `6`: "input"
   - Arguments
     - `1`: address
   - Description
