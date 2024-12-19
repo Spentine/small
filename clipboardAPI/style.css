@@ -1,0 +1,16 @@
+.htmlDisplay {
+  margin: 8px;
+  background-color: #222222;
+}
+
+img {
+  box-shadow: 0px 0px 10px #ffffff44;
+}
+
+.dataContainer {
+  padding: 16px;
+  margin: 8px;
+  background-color: #2b2b2b;
+  box-shadow: 2px 2px 8px #ffffff44;
+  border-radius: 4px;
+}

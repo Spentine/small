@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
 body {
   background-color: #222222;
@@ -33,6 +34,18 @@ hr {
   border-style: solid;
   border-width: 2px;
   border-radius: 2px;
+}
+
+pre, .preLike {
+  font-family: "Fira Code";
+  font-size: 16px;
+  font-weight: 500;
+  
+  background-color: #00000044;
+  padding: 8px;
+  
+  border-radius: 4px;
+  box-shadow: #ffffff22 2px 2px 6px;
 }
 
 textarea {
