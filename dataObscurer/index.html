@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../globalCss/pageStyle.css">
+    <script src="main.js" type="module"></script>
+  </head>
+  <body>
+    
+    <div class="container">
+      <h1 class="centeredText"> Data Obscurer </h1>
+      
+      <p class="paragraphText">
+        &emsp; This tool allows for the obscuring of data in a file.
+      </p>
+    </div>
+    
+    <div class="container">
+      <h2 class="centeredText"> Settings </h2>
+      <div class="centered">
+        <p> Seed </p>
+        <input type="number" id="seedInput" placeholder="Seed" min="1" max="2147483647" value="1"/>
+      </div>
+      <div class="centered">
+        <p> Inverted </p>
+        <input type="checkbox" id="invertedInput"/>
+      </div>
+    </div>
+    
+    <div class="container">
+      <h2 class="centeredText"> Input File </h2>
+      <div class="centered">
+        <input type="file" id="fileInput"/>
+      </div>
+      <div class="centered">
+        <button id="processFiles"> Process Files </button>
+      </div>
+    </div>
+  </body>
+</html>
