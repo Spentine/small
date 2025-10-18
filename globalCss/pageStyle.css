@@ -77,23 +77,13 @@ textarea {
   border-radius: 8px;
   padding: 16px;
   margin: 12px auto;
-  box-shadow: 5px 5px 10px #ffffff44;
+  border: 1px solid #555555;
+  box-shadow: 2px 2px 8px #00000088;
   
   display: block;
-  /*
-  visibility: visible;
-  opacity: 1;
-  transform: none;
-  transition: 500ms;
-  */
 }
 
 .container.hidden {
-  /*
-  transform: translate(0px, -100px);
-  visibility: hidden;
-  opacity: 0;
-  */
   display: none;
 }
 
