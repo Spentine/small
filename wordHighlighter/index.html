@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../globalCss/pageStyle.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="module"></script>
+  </head>
+  <body>
+    
+    <div class="container">
+      <h1 class="centeredText"> Word Frequency Highlighter </h1>
+      
+      <p class="paragraphText">
+        &emsp; This tool highlights a word based on its frequency. It is useful for identifying the user of more obscure words in texts.
+      </p>
+    </div>
+    
+    <div class="container">
+      <h2 class="centeredText"> Select Corpus </h2>
+      
+      <div class="centered">
+        <input type="text" id="corpusLink" placeholder="Enter corpus link" style="width: 100%;" value="https://raw.githubusercontent.com/Spentine/small/refs/heads/main/wordHighlighter/1m.txt">
+      </div>
+      
+      <div class="centered">
+        <button id="loadCorpusButton" class="buttonStyle"> Load Corpus </button>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="textInput">
+        <textarea id="textareaInput" class="inputStyle"></textarea>
+        <p id="highlightedText" class="inputStyle"></p>
+      </div>
+    </div>
+    
+  </body>
+</html>

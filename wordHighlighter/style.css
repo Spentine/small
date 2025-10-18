@@ -1,0 +1,50 @@
+.inputStyle {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+  
+  border: none;
+  padding: 8px;
+  
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+#textareaInput {
+  z-index: 1;
+  
+  background: transparent;
+  color: transparent;
+  resize: none;
+  caret-color: #fff;
+  overflow: hidden;
+  
+  box-shadow: none;
+}
+
+#highlightedText {
+  z-index: 0;
+  margin: 0;
+}
+
+.textInput {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  
+  background-color: #282828;
+  border-radius: 2px;
+  border: 1px solid #555;
+  box-shadow: 0 0 8px #00000088;
+}
+
+.textInput > * {
+  grid-column: 1;
+  grid-row: 1;
+}
